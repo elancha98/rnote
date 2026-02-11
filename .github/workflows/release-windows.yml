@@ -17,16 +17,16 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - name: Install Inno 6
-        id: install_inno
-        shell: pwsh
-        run: |
-          echo Y | & winget install -e --id JRSoftware.InnoSetup -v 6.4.3 --accept-package-agreements --accept-source-agreements --scope machine || 1
-          if (Test-Path "C:\Program Files (x86)\Inno Setup 6\") {
-            echo "inno installed successfully!!"
-          } else {
-            throw "could not find inno's installation folder"
-          }
+      #- name: Install Inno 6
+      #  id: install_inno
+      #  shell: pwsh
+      #  run: |
+      #    echo Y | & winget install -e --id JRSoftware.InnoSetup -v 6.4.3 --accept-package-agreements --accept-source-agreements --scope machine || 1
+      #    if (Test-Path "C:\Program Files (x86)\Inno Setup 6\") {
+      #      echo "inno installed successfully!!"
+      #    } else {
+      #      throw "could not find inno's installation folder"
+      #    }
 
       - name: Set installer name
         id: set_installer_name
@@ -35,13 +35,13 @@ jobs:
           echo "name=rnote-win-installer-$(echo ${GITHUB_REF_NAME#v} \
             | sed -e 's/[^A-Za-z0-9._-]/_/g')-x86_64" >> $GITHUB_OUTPUT
 
-      - name: Setup MSYS2
-        uses: msys2/setup-msys2@v2
-        with:
-          release: false
-          update: true
-          install: |
-            mingw-w64-x86_64-binutils
+      #- name: Setup MSYS2
+      #  uses: msys2/setup-msys2@v2
+      #  with:
+      #    release: false
+      #    update: true
+      #    install: |
+      #      mingw-w64-x86_64-binutils
 
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
