@@ -39,7 +39,8 @@ jobs:
       - name: Setup MSYS2
         uses: msys2/setup-msys2@v2
         with:
-          release: false
+          release: true
+          location: C:\
           update: true
           install: |
             mingw-w64-x86_64-binutils
@@ -47,7 +48,7 @@ jobs:
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable-gnu
+          toolchain: stable-gnullvm
 
       - name: Configure PATH
         run: echo "export PATH=$PATH:/c/Users/$USER/.cargo/bin:/c/Program\ Files\ \(x86\)/Inno\ Setup\ 6" > ~/.bashrc
