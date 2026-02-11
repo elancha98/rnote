@@ -94,7 +94,7 @@ prerequisites-win:
     #    mingw-w64-x86_64-poppler-data mingw-w64-x86_64-angleproject
     # MISSING: gcc and toolchain
     pacman -S --noconfirm \
-        unzip git mingw-mingw-w64-clang-aarch64-xz mingw-w64-clang-aarch64-pkgconf mingw-w64-clang-aarch64-clang \
+        unzip git mingw-w64-clang-aarch64-xz mingw-w64-clang-aarch64-pkgconf mingw-w64-clang-aarch64-clang \
         mingw-w64-clang-aarch64-autotools mingw-w64-clang-aarch64-make mingw-w64-clang-aarch64-cmake \
         mingw-w64-clang-aarch64-meson mingw-w64-clang-aarch64-diffutils mingw-w64-clang-aarch64-desktop-file-utils \
         mingw-w64-clang-aarch64-appstream mingw-w64-clang-aarch64-gtk4 mingw-w64-clang-aarch64-libadwaita mingw-w64-clang-aarch64-poppler \
