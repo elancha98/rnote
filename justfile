@@ -123,7 +123,7 @@ setup-release *MESON_ARGS:
 
 # in MINGW64 shell
 setup-win-installer installer_name="rnote-win-installer":
-    meson.exe setup \
+    /clangarm64/bin/meson.exe setup \
         --prefix={{ mingw64_prefix_path }} \
         -Dprofile=default \
         -Dcli=true \
