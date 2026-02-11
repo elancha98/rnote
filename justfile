@@ -124,6 +124,7 @@ setup-release *MESON_ARGS:
 # in MINGW64 shell
 setup-win-installer installer_name="rnote-win-installer":
     echo $PATH
+    rustc --print
     /clangarm64/bin/meson.exe setup \
         --prefix=/clangarm64 \
         -Dprofile=default \
