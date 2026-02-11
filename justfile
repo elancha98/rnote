@@ -99,8 +99,8 @@ prerequisites-win:
         mingw-w64-clang-aarch64-meson mingw-w64-clang-aarch64-diffutils mingw-w64-clang-aarch64-desktop-file-utils \
         mingw-w64-clang-aarch64-appstream mingw-w64-clang-aarch64-gtk4 mingw-w64-clang-aarch64-libadwaita mingw-w64-clang-aarch64-poppler \
         mingw-w64-clang-aarch64-poppler-data mingw-w64-clang-aarch64-angleproject
-    pacman -Ql mingw-w64-clang-aarch64-meson
     export PATH="/clangarm64/bin/:$PATH"
+    ls /clangarm64/bin/meson.exe
     #mv /mingw64/lib/libpthread.dll.a /mingw64/lib/libpthread.dll.a.bak
     mv /clangarm64/lib/libpthread.dll.a /clangarm64/lib/libpthread.dll.a.bak
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
