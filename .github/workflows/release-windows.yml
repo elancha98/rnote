@@ -43,12 +43,12 @@ jobs:
           location: C:\
           update: true
           install: |
-            mingw-w64-x86_64-binutils
+            mingw-w64-clang-aarch64-arm-none-eabi-binutils
 
       - name: Install rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable-msvc
+          toolchain: stable-aarch64-pc-windows-msvc
 
       - name: Configure PATH
         run: echo "export PATH=/clangarm64/bin:$PATH:/c/Users/$USER/.cargo/bin:/c/Program\ Files\ \(x86\)/Inno\ Setup\ 6" > ~/.bashrc
