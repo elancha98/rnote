@@ -13,9 +13,9 @@ jobs:
     permissions:
       # needed for uploading release artifact
       contents: write
-    defaults:
-      run:
-        shell: msys2 {0}
+    #defaults:
+    #  run:
+    #    shell: msys2 {0}
     steps:
       #- name: Install Inno 6
       #  id: install_inno
