@@ -125,6 +125,8 @@ setup-release *MESON_ARGS:
 setup-win-installer installer_name="rnote-win-installer":
     echo $PATH
     echo "fn main() {println!(\"Hello World\");}" > a.rs
+    rustc a.rs
+    ./a
     rustc -C linker=cc a.rs
     ./a
     rustc --print cfg --print target-list -C linker=cc
